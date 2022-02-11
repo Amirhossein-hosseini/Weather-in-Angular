@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { WeatherCallService } from './services/weather-call.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +18,17 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TooltipModule.forRoot(),
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    WeatherCallService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+
+  }
+ }
