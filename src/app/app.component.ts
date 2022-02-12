@@ -10,31 +10,18 @@ import { WeatherCallService } from './services/weather-call.service';
 })
 export class AppComponent {
   title = 'AngularTempeleate';
-  loading:boolean = false;
-  findWeatherbySearchWithCityName$!: Observable<weatherDto[]>;
-  private subject$ = new Subject<string>()
-  constructor( private weatherService: WeatherCallService) { }
+
+  constructor( ) { }
 
 
 
 
 
   ngOnInit(): void{
-this.findWeatherbySearchWithCityName$ = this.subject$.pipe(
-  tap(_ =>this.loading = true),
-  debounceTime(300),
-distinctUntilChanged(),
-switchMap((term:string) =>this.weatherService.getWeatherDataByCityName(term)),
-tap((_) =>this.loading = false)
 
-
-)
   }
 
 
-  search($event:string){
-    this.subject$.next($event)
-  }
 
 
 }

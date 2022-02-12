@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { WeatherCallService } from './services/weather-call.service';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     TooltipModule.forRoot(),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     WeatherCallService

@@ -3,7 +3,10 @@
 <div class="row justify-content-center">
 
   <div class="col-md-6 offset-sm-3">
-    <input name="query" placeholder="searching..." autocomplete="off" #searchBox  (input)="search(searchBox.value)">
+    <input  placeholder="searching..."  #searchBox  (input)="search(searchBox.value)">
+    <div class="loading" *ngIf="loading">
+      loading...
+    </div>
     <table class="table table-dark" *ngFor="let f of findWeatherbySearchWithCityName$|async ">
       <thead>
         <tr>
