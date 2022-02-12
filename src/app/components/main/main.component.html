@@ -3,24 +3,25 @@
 <div class="row justify-content-center">
 
   <div class="col-md-6 offset-sm-3">
-    <input  placeholder="searching..."  #searchBox  (input)="search(searchBox.value)">
+    <input  placeholder="searching..."  #searchBox autocomplete="off" (input)="search(searchBox.value)">
+    <br><br>
     <div class="loading" *ngIf="loading">
       loading...
     </div>
-    <table class="table table-dark" *ngFor="let f of findWeatherbySearchWithCityName$|async ">
+    <table class="table " *ngFor="let f of findWeatherbySearchWithCityName$|async ">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">Name</th>
-          <th scope="col">icon</th>
+          <th >Name City</th>
+          <th>location</th>
+          <th > woeid</th>
+
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row"></th>
           <td>{{f.title}}</td>
-          <td>{{f.City}}</td>
-          <td>{{f.icon}}</td>
+          <td>{{f.location_type}}</td>
+          <td>{{f. woeid}}</td>
         </tr>
        </tbody>
     </table>
