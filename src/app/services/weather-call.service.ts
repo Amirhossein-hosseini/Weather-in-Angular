@@ -14,7 +14,6 @@ export class WeatherCallService {
 
 
      url = 'https://www.metaweather.com/api/location/search/'
-   url2 = 'https://www.metaweather.com/api/static/img/weather/png/'
 
  getWeatherDataByCityName(query:string):Observable<weatherDto[]>{
 
@@ -33,12 +32,6 @@ export class WeatherCallService {
    )
 
 }
-
-getWeatherDataByCoords(weather_state_name:string ):Observable<weatherImage[]>{
-  let params = new HttpParams()
-  .set('X.png',weather_state_name)
-
-  return this.http.get<weatherImage[]>(this.url2,{params}).pipe(map((res) =>res))
 }
 
-}
+

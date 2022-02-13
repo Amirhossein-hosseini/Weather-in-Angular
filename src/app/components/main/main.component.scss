@@ -1,6 +1,7 @@
 table, td, th {
   border: 1px solid #ddd;
-  text-align: left;
+  text-align: center;
+  margin-right: 30px;
 }
 
 table {
@@ -10,4 +11,10 @@ table {
 
 th, td {
   padding: 15px;
+}
+
+input{
+width: 50%;
+padding: 1rem;
+border: 2px solid blue;
 }

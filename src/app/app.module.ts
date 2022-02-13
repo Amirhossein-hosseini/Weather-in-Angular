@@ -10,6 +10,8 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { WeatherCallService } from './services/weather-call.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     TooltipModule.forRoot(),
+    TypeaheadModule.forRoot(),
     FormsModule,
     HttpClientModule
   ],

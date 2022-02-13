@@ -2,16 +2,16 @@
 
 <div class="row justify-content-center">
 
-  <div class="col-md-6 offset-sm-3">
-    <input  placeholder="searching..."  #searchBox autocomplete="off" (input)="search(searchBox.value)">
+  <div class="col-md-6 offset-sm-3 ">
+    <input  placeholder="searching..."  #SearchBox (input)="search(SearchBox.value)">
     <br><br>
     <div class="loading" *ngIf="loading">
       loading...
     </div>
-    <table class="table " *ngFor="let f of findWeatherbySearchWithCityName$|async ">
+    <table *ngFor="let f of findWeatherbySearchWithCityName$|async ">
       <thead>
         <tr>
-          <th >Name City</th>
+          <th>Name City</th>
           <th>location</th>
           <th > woeid</th>
 
