@@ -1,5 +1,8 @@
 export class weatherImage{
-  latt_long!:string;
-  weather_state_name!:string;
-  woeid?:string
+  latt?:number;
+  long!:number
+  weather_state_name?:string;
+  woeid!:number
+  title!:string
+  weather_state_bbr?:string
 }
