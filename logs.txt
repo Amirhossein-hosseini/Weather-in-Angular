@@ -1,0 +1,8 @@
+26a1f19 (HEAD -> main) not currect the file service.ts and main.component.ts for searching
+afb6337 add css style to input to the maincomponent
+c093abb compelete the project weathe app
+6af6a95 cmpelete the project
+4a41cf9 add HttpClientModule in app.module.ts
+b46cd95 create componentes and service and not compelete the project
+7146aa6 create folder and create components and services
+4cb2e5c initial commit

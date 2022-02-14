@@ -4,29 +4,35 @@
 
   <div class="col-md-6 offset-sm-3 ">
     <input  placeholder="searching..."  #SearchBox (input)="search(SearchBox.value)">
+    <!-- <button type="button" class="btn btn-primary" (input)="getCity(SearchBox.value)" id="">click</button> -->
     <br><br>
     <div class="loading" *ngIf="loading">
       loading...
     </div>
-    <table *ngFor="let f of findWeatherbySearchWithCityName$|async ">
+    <table *ngFor="let item of findWeatherbySearchWithCityName$|async" >
       <thead>
         <tr>
           <th>Name City</th>
-          <th>location</th>
+          <!-- <th>weather_state_name</th> -->
+          <th>weather Image</th>
           <th > woeid</th>
 
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>{{f.title}}</td>
-          <td>{{f.location_type}}</td>
-          <td>{{f. woeid}}</td>
+          <td>{{item.title}}</td>
+          <!-- <td  >{{f.weather_state_name}}</td> -->
+          <td >
+            <div ><img src="https://www.metaweather.com/api/img/weather/png/{{item.weather_state_name}}.png" alt=""></div>
+          </td>
+          <td>{{item.woeid}}</td>
         </tr>
        </tbody>
     </table>
 
-  </div>
-
-
 </div>
+</div>
+
+
+
