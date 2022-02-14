@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 26a1f19 (HEAD -> main) not currect the file service.ts and main.component.ts for searching
+=======
+8773637 (HEAD -> main) problem in main.componenet.ts
+26a1f19 not currect the file service.ts and main.component.ts for searching
+5484899 (master/main) problem in file main.ts and service
+>>>>>>> cc8987472998afda7a5985ce03bd41971a784695
 afb6337 add css style to input to the maincomponent
 c093abb compelete the project weathe app
 6af6a95 cmpelete the project
 4a41cf9 add HttpClientModule in app.module.ts
 b46cd95 create componentes and service and not compelete the project
+<<<<<<< HEAD
 7146aa6 create folder and create components and services
 4cb2e5c initial commit
+=======
+7146aa6 create folder and create components and services
+>>>>>>> cc8987472998afda7a5985ce03bd41971a784695
