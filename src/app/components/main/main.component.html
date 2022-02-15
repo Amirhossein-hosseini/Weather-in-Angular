@@ -3,22 +3,13 @@
 <div class="row justify-content-center">
 
   <div class="col-md-6 offset-sm-3 ">
-<<<<<<< HEAD
-    <input  placeholder="searching..."  #SearchBox (input)="search(SearchBox.value)">
-    <!-- <button type="button" class="btn btn-primary" (input)="getCity(SearchBox.value)" id="">click</button> -->
-=======
     <input  placeholder="searching..."  #SearchBox >
     <button type="button" class="btn btn-primary" (input)="getCity(SearchBox.value)" id="">click</button>
->>>>>>> cc8987472998afda7a5985ce03bd41971a784695
     <br><br>
     <div class="loading" *ngIf="loading">
       loading...
     </div>
-<<<<<<< HEAD
-    <table *ngFor="let item of findWeatherbySearchWithCityName$|async" >
-=======
     <table >
->>>>>>> cc8987472998afda7a5985ce03bd41971a784695
       <thead>
         <tr>
           <th>Name City</th>
@@ -30,41 +21,20 @@
       </thead>
       <tbody>
         <tr>
-<<<<<<< HEAD
-          <td>{{item.title}}</td>
-          <!-- <td  >{{f.weather_state_name}}</td> -->
-          <td >
-            <div ><img src="https://www.metaweather.com/api/img/weather/png/{{item.weather_state_name}}.png" alt=""></div>
-          </td>
-          <td>{{item.woeid}}</td>
-=======
           <td>{{weatherData.title}}</td>
           <!-- <td  >{{f.weather_state_name}}</td> -->
-          <!-- <td >
-            <div ><img src="https://www.metaweather.com/api/img/weather/png/{{weatherData.weather_state_name}}.png" alt=""></div>
-          </td> -->
+          <td >
+            <div >
+              <img src="http://openweathermap.org/img/wn/{{weatherData.weather[0].icon}}@2x.png">
+            </div>
+          </td>
           <td>{{weatherData.woeid}}</td>
->>>>>>> cc8987472998afda7a5985ce03bd41971a784695
         </tr>
        </tbody>
     </table>
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-</div>
-</div>
-
-
-
-=======
 
 
   </div>
-=======
 </div>
-</div>
->>>>>>> bacebd1dcac7fd7841ffb02ba13e06ab2f556665
 
 
->>>>>>> cc8987472998afda7a5985ce03bd41971a784695
